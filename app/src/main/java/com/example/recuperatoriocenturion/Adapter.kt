@@ -28,7 +28,7 @@ class Adapter (val context: Context): ListAdapter<Receta, Adapter.ViewHolder>(Di
 
             plato.text = receta.plato.toString()
             dificultad.text = receta.dificultad.toString()
-            origen.text = receta.dificultad.toString()
+            origen.text = receta.origen.toString()
 
 
             val imagen = when (receta.plato) {
