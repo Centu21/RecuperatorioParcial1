@@ -1,11 +1,14 @@
 package com.example.recuperatoriocenturion
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var IngredientesDetalle: TextView
+    private lateinit var btnVolver: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +19,12 @@ class DetailActivity : AppCompatActivity() {
         IngredientesDetalle = findViewById(R.id.tvIngredientesDetalle)
         IngredientesDetalle.text = receta?.ingredientes.toString()
 
+
+        btnVolver = findViewById(R.id.btnVolverPP)
+        btnVolver.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
